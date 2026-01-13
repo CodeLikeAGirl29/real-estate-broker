@@ -1,5 +1,7 @@
 # Lindsey Howard — Florida Real Estate Candidate Site
 
+> live link is [here](https://realtor-linds-howard.netlify.app/)
+
 A clean, responsive, static website that communicates my real estate licensing status, client-ready systems, and a no-pressure approach to communication. Built with HTML, CSS, and JavaScript (plus Bootstrap + Font Awesome via CDN).
 
 > **Compliance:** Florida Real Estate Sales Associate license pending — not yet licensed. Services available after passing and activation.
