@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Lindsey Howard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script defer src="../js/main.js"></script>
+
+  <style>
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .chip {
+      border: 1px solid rgba(20, 33, 43, .10);
+      background: rgba(255, 255, 255, .65);
+      color: var(--accent2);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-weight: 800;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease;
+      user-select: none;
+    }
+
+    .chip:hover {
+      transform: translateY(-1px);
+      background: var(--accent-soft);
+    }
+
+    .chip.active {
+      background: var(--accent-soft-strong);
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    @media (max-width: 980px) {
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .proj {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .proj-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .proj h2 {
+      margin: 0 0 6px;
+      font-size: 1.3rem;
+    }
+
+    .proj p {
+      margin: 0;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(20, 33, 43, .06);
+      color: var(--accent2);
+      font-weight: 800;
+      font-size: .82rem;
+      white-space: nowrap;
+    }
+
+    .proj-actions {
+      margin-top: auto;
+      padding-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .proj-actions a {
+      text-decoration: none;
+    }
+
+    .callout {
+      background: linear-gradient(135deg, rgba(15, 77, 63, .10), rgba(11, 58, 48, .08));
+      border: 1px solid rgba(20, 33, 43, .10);
+    }
+
+    .small-note {
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Lindsey Howard Home">
+        <img src="../images/logo.png" alt="Lindsey Howard" class="brand-logo" loading="eager" decoding="async" />
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle menu</span>
+        ☰
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="buyer-journey.html">Buyer Journey</a>
+        <a class="nav-link" href="pipeline.html">Pipeline</a>
+        <a class="nav-link active" href="projects.html">Projects</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <header class="page-head container">
+      <h1>Projects</h1>
+      <p class="page-subhead">Systems + skills in action.</p>
+
+      <p class="lead muted">
+        These are real-world systems I’m building for clarity, follow-through, and client experience.
+        They reflect my background in sales, cold-calling, customer service, and web development.
+      </p>
+
+      <div class="filters" aria-label="Project filters">
+        <button class="chip active" type="button" data-filter="all">All</button>
+        <button class="chip" type="button" data-filter="real-estate">Real estate</button>
+        <button class="chip" type="button" data-filter="systems">Systems</button>
+        <button class="chip" type="button" data-filter="web">Web</button>
+      </div>
+
+      <p class="muted small small-note">
+        Tip: If you’re a buyer or renter, start with <strong>Buyer Journey</strong> and <strong>Pipeline</strong>.
+      </p>
+    </header>
+
+    <section class="section">
+      <div class="container project-grid" id="projectGrid">
+
+        <!-- Project 1 -->
+        <article class="card proj" data-tags="real-estate systems">
+          <div class="proj-head">
+            <div>
+              <h2>Buyer Journey Workflow</h2>
+              <p class="muted">A step-by-step process that keeps buyers calm, organized, and moving forward.</p>
+            </div>
+            <span class="tag"><i class="fa-solid fa-route"></i> Process</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="tag"><i class="fa-solid fa-check"></i> Clear milestones</span>
+            <span class="tag"><i class="fa-solid fa-comments"></i> Communication plan</span>
+            <span class="tag"><i class="fa-solid fa-list-check"></i> Next-step guidance</span>
+          </div>
+
+          <div class="proj-actions">
+            <a class="c-btn c-btn-primary" href="buyer-journey.html">View workflow</a>
+            <a class="c-btn c-btn-ghost" href="contact.html">Ask a question</a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="card proj" data-tags="real-estate systems">
+          <div class="proj-head">
+            <div>
+              <h2>Lead Follow-Up &amp; Pipeline System</h2>
+              <p class="muted">A structured pipeline to keep leads warm, organized, and supported.</p>
+            </div>
+            <span class="tag"><i class="fa-solid fa-filter-circle-dollar"></i> Pipeline</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="tag"><i class="fa-solid fa-bolt"></i> Fast response</span>
+            <span class="tag"><i class="fa-solid fa-calendar-check"></i> Cadence</span>
+            <span class="tag"><i class="fa-solid fa-notes-medical"></i> Notes tracked</span>
+          </div>
+
+          <div class="proj-actions">
+            <a class="c-btn c-btn-primary" href="pipeline.html">View system</a>
+            <a class="c-btn c-btn-ghost" href="contact.html">Connect</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card proj callout" data-tags="systems web">
+          <div class="proj-head">
+            <div>
+              <h2>Contact &amp; Intake Form</h2>
+              <p class="muted">A friction-free way to capture details and start the conversation clearly.</p>
+            </div>
+            <span class="tag"><i class="fa-solid fa-clipboard-list"></i> Intake</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="tag"><i class="fa-solid fa-shield"></i> Clean + safe</span>
+            <span class="tag"><i class="fa-solid fa-envelope"></i> Email fallback</span>
+            <span class="tag"><i class="fa-solid fa-location-dot"></i> Local map</span>
+          </div>
+
+          <div class="proj-actions">
+            <a class="c-btn c-btn-primary" href="contact.html">Open contact</a>
+            <a class="c-btn c-btn-ghost" href="contact.html#contactForm">Send message</a>
+          </div>
+        </article>
+
+        <!-- Project 4 (Dev credibility, framed as real estate value) -->
+        <article class="card proj" data-tags="web">
+          <div class="proj-head">
+            <div>
+              <h2>Real Estate Status Site</h2>
+              <p class="muted">This website itself—built to communicate licensing status and client readiness clearly.
+              </p>
+            </div>
+            <span class="tag"><i class="fa-solid fa-globe"></i> Website</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Polished UI</span>
+            <span class="tag"><i class="fa-solid fa-mobile-screen"></i> Responsive</span>
+            <span class="tag"><i class="fa-solid fa-gauge-high"></i> Lightweight</span>
+          </div>
+
+          <div class="proj-actions">
+            <a class="c-btn c-btn-primary" href="../index.html">View homepage</a>
+            <a class="c-btn c-btn-ghost" href="contact.html">Work with me</a>
+          </div>
+        </article>
+
+        <!-- Project 5 (Optional placeholder you can expand later) -->
+        <article class="card proj" data-tags="real-estate systems">
+          <div class="proj-head">
+            <div>
+              <h2>Neighborhood Notes System</h2>
+              <p class="muted">A simple way to track neighborhood preferences, dealbreakers, and “must-haves.”</p>
+            </div>
+            <span class="tag"><i class="fa-solid fa-map"></i> Notes</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="tag"><i class="fa-solid fa-star"></i> Preferences</span>
+            <span class="tag"><i class="fa-solid fa-ban"></i> Dealbreakers</span>
+            <span class="tag"><i class="fa-solid fa-layer-group"></i> Shortlists</span>
+          </div>
+
+          <div class="proj-actions">
+            <a class="c-btn c-btn-ghost" href="contact.html">Request a copy</a>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="card proj" data-tags="systems">
+          <div class="proj-head">
+            <div>
+              <h2>Client Update Framework</h2>
+              <p class="muted">A weekly update style that keeps clients informed without overwhelming them.</p>
+            </div>
+            <span class="tag"><i class="fa-solid fa-circle-info"></i> Updates</span>
+          </div>
+
+          <div class="meta-row">
+            <span class="tag"><i class="fa-solid fa-list"></i> Summary</span>
+            <span class="tag"><i class="fa-solid fa-arrow-right"></i> Next steps</span>
+            <span class="tag"><i class="fa-solid fa-calendar"></i> Deadlines</span>
+          </div>
+
+          <div class="proj-actions">
+            <a class="c-btn c-btn-ghost" href="contact.html">Ask about it</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="card">
+          <div class="split">
+            <div>
+              <h2>Want updates when I’m officially licensed?</h2>
+              <p class="muted" style="margin:0;">
+                If you’re planning a move in the next few months, reach out now and I’ll follow up as soon as I’m
+                active.
+              </p>
+            </div>
+            <div class="split-actions">
+              <a class="c-btn c-btn-primary" href="contact.html">Connect</a>
+              <a class="c-btn c-btn-ghost" href="pipeline.html">See follow-up system</a>
+            </div>
+          </div>
+
+          <p class="note" style="margin-top:14px;">
+            <strong>Compliance:</strong> Florida Real Estate Sales Associate license pending — not yet licensed.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-row footer-brand-text">
+          <strong class="footer-name">Lindsey Howard</strong>
+          <span class="footer-title">Future Florida Real Estate Sales Associate</span>
+        </div>
+
+        <p class="footer-note">
+          Clear communication. Calm guidance. Consistent follow-through.
+        </p>
+
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/lindsey-howard" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <p><strong>Location:</strong> Emerald Coast, Florida</p>
+        <p class="muted">
+          Florida Real Estate Sales Associate license pending.<br />
+          Exam scheduled February 2.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+
+  <!-- Tiny filter script (no framework) -->
+  <script>
+    const chips = document.querySelectorAll(".chip");
+    const cards = document.querySelectorAll("#projectGrid .proj");
+
+    function setActive(btn) {
+      chips.forEach(c => c.classList.remove("active"));
+      btn.classList.add("active");
+    }
+
+    function filter(tag) {
+      cards.forEach(card => {
+        const tags = (card.getAttribute("data-tags") || "").split(" ");
+        const show = tag === "all" || tags.includes(tag);
+        card.style.display = show ? "" : "none";
+      });
+    }
+
+    chips.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const tag = btn.getAttribute("data-filter");
+        setActive(btn);
+        filter(tag);
+      });
+    });
+  </script>
+</body>
+
+</html>

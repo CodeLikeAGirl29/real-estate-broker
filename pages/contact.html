@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Lindsey Howard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+
+  <!-- Font Awesome (no integrity, since that fixed your icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script defer src="../js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header (paths adjusted for /pages/) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Lindsey Howard Home">
+        <img src="../images/logo.png" alt="Lindsey Howard" class="brand-logo" loading="eager" decoding="async" />
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
+        <span class="sr-only">Toggle menu</span>
+        ☰
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link" href="buyer-journey.html">Buyer Journey</a>
+        <a class="nav-link" href="projects.html">Projects</a>
+        <a class="nav-link active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <header class="page-head container">
+      <h1>Contact</h1>
+      <p class="page-subhead">Let’s connect.</p>
+      <p class="lead muted">
+        Reach out anytime. I’m currently preparing for my Florida Sales Associate exam on <strong>February 2</strong>,
+        and I’m happy to connect and follow up as soon as I’m officially licensed.
+      </p>
+    </header>
+
+    <section class="container pb-5">
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="card">
+            <h2 class="card-title" style="margin-bottom: 6px;">Send a message</h2>
+            <p class="muted" style="margin-top:0;">
+              Tell me what you’re looking for and your preferred way to connect.
+            </p>
+
+            <!-- ✅ Netlify form (works when hosted on Netlify) -->
+            <!-- Change "name" if you want. Keep data-netlify + netlify-honeypot. -->
+            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
+
+              <!-- honeypot -->
+              <p style="display:none;">
+                <label>Don’t fill this out: <input name="bot-field" /></label>
+              </p>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Name</label>
+                  <input id="name" name="name" class="form-control" autocomplete="name" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input id="email" name="email" type="email" class="form-control" autocomplete="email" required />
+                </div>
+
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">Phone (optional)</label>
+                  <input id="phone" name="phone" class="form-control" autocomplete="tel" />
+                </div>
+
+                <div class="col-md-6">
+                  <label for="interest" class="form-label">I’m interested in</label>
+                  <select id="interest" name="interest" class="form-select" required>
+                    <option value="">Select one</option>
+                    <option value="Buying">Buying</option>
+                    <option value="Renting">Renting</option>
+                    <option value="Selling">Selling</option>
+                    <option value="Networking">Networking</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="timeline" class="form-label">Timeline</label>
+                  <select id="timeline" name="timeline" class="form-select" required>
+                    <option value="">Select one</option>
+                    <option value="ASAP">ASAP</option>
+                    <option value="0-3 months">0–3 months</option>
+                    <option value="3-6 months">3–6 months</option>
+                    <option value="6+ months">6+ months</option>
+                    <option value="Not sure yet">Not sure yet</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea id="message" name="message" class="form-control" rows="5" required
+                    placeholder="Example: I’m looking to buy in Fort Walton Beach. Budget range is __. Preferred neighborhoods are __."></textarea>
+                </div>
+
+                <div class="col-12 d-flex flex-wrap gap-2 align-items-center">
+                  <button class="c-btn c-btn-primary" type="submit">Send message</button>
+                  <button class="c-btn c-btn-ghost" type="button" id="mailtoBtn">Send via email app</button>
+                  <span class="muted small" id="formStatus" role="status" aria-live="polite"></span>
+                </div>
+              </div>
+
+              <p class="note" style="margin-top:14px;">
+                <strong>Compliance:</strong> Florida Real Estate Sales Associate license pending — not yet licensed.
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact info + map -->
+        <div class="col-lg-5">
+          <div class="card">
+            <h2 class="card-title" style="margin-bottom: 6px;">Fort Walton Beach</h2>
+            <p class="muted" style="margin-top:0;">Okaloosa county, Florida</p>
+
+            <div class="contact-list" style="display:grid; gap:10px; margin: 14px 0 16px;">
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-location-dot" style="margin-top:3px;"></i>
+                <span>Fort Walton Beach, FL</span>
+              </div>
+
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-envelope" style="margin-top:3px;"></i>
+                <a class="text-link" href="mailto:the.wifey91@gmail.com">the.wifey91@gmail.com</a>
+              </div>
+
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-phone" style="margin-top:3px;"></i>
+                <a class="text-link" href="tel:+18505335877">850-533-5877</a>
+              </div>
+
+              <div style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-brands fa-linkedin" style="margin-top:3px;"></i>
+                <a class="text-link" href="https://www.linkedin.com/in/lindsey-howard" target="_blank"
+                  rel="noopener">LinkedIn</a>
+              </div>
+            </div>
+
+            <!-- Map embed (no key) -->
+            <div class="map-wrap" style="border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.14);">
+              <iframe title="Map of Fort Walton Beach, Florida" width="100%" height="220" style="border:0;"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-86.6586%2C30.3900%2C-86.5750%2C30.4500&amp;layer=mapnik&amp;marker=30.4200%2C-86.6180">
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (text brand, not logo) -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-row footer-brand-text">
+          <strong class="footer-name">Lindsey Howard</strong>
+          <span class="footer-title">Future Florida Real Estate Sales Associate</span>
+        </div>
+
+        <p class="footer-note">
+          Clear communication. Calm guidance. Consistent follow-through.
+        </p>
+
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/lindsey-howard" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-meta">
+        <p><strong>Location:</strong> Emerald Coast, Florida</p>
+        <p class="muted">
+          Florida Real Estate Sales Associate license pending.<br />
+          Exam scheduled February 2.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+
+  <!-- Contact form helper (works locally + on Netlify) -->
+  <script>
+    const mailtoBtn = document.getElementById("mailtoBtn");
+    const form = document.getElementById("contactForm");
+    const statusEl = document.getElementById("formStatus");
+
+    function buildMailto() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const interest = document.getElementById("interest").value.trim();
+      const timeline = document.getElementById("timeline").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = encodeURIComponent(`Website inquiry: ${interest || "Contact"}`);
+      const body = encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInterest: ${interest}\nTimeline: ${timeline}\n\nMessage:\n${message}\n`
+      );
+
+      return `mailto:the.wifey91@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    if (mailtoBtn) {
+      mailtoBtn.addEventListener("click", () => {
+        window.location.href = buildMailto();
+      });
+    }
+
+    // Friendly status text on submit (Netlify handles the real submission when deployed)
+    if (form) {
+      form.addEventListener("submit", () => {
+        if (statusEl) statusEl.textContent = "Sending…";
+        setTimeout(() => {
+          if (statusEl) statusEl.textContent = "If you don’t see a confirmation, use “Send via email app.”";
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+
+</html>
