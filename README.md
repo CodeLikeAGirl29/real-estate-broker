@@ -6,6 +6,8 @@ A clean, responsive, static website that communicates my real estate licensing s
 
 > **Compliance:** Florida Real Estate Sales Associate license pending — not yet licensed. Services available after passing and activation.
 
+![screenshot](https://res.cloudinary.com/dhw9dl4gm/image/upload/v1772970195/Lindsey-Howard-Florida-Real-Estate-Candidate-03-08-2026_06_42_AM_pwuqvf.png)
+
 ---
 
 ## ✨ Features
@@ -40,6 +42,7 @@ A clean, responsive, static website that communicates my real estate licensing s
 ├─ index.html
 ├─ pages/
 │  ├─ buyer-journey.html
+│  ├─ case-studies.html
 │  ├─ pipeline.html
 │  ├─ projects.html
 │  └─ contact.html
@@ -49,6 +52,8 @@ A clean, responsive, static website that communicates my real estate licensing s
 │  └─ main.js
 └─ images/
    ├─ logo.png
+   ├─ hero-img-2.jpg
+   ├─ pic-of-me.jpg
    └─ hero-img-destin.png
 ````
 
