@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lindsey Howard | Real Estate Narrative & Digital Architecture
 
-## Getting Started
+A modern, high-performance web platform built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**. This project serves as a digital portfolio for my transition into the Florida Real Estate market, merging technical precision with local storytelling.
 
-First, run the development server:
+![screenshot](https://res.cloudinary.com/dhw9dl4gm/image/upload/v1774694540/localhost-3000-03-28-2026_05_41_AM_u2yabi.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+> live link is [here](https://lindsey-howard.netlify.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[![CodeFactor](https://www.codefactor.io/repository/github/codelikeagirl29/real-estate-broker/badge)](https://www.codefactor.io/repository/github/codelikeagirl29/real-estate-broker)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌴 Project Vision
+This isn't just a "broker site"—it's a narrative-driven experience. Each neighborhood in the **850 area** (Fort Walton Beach, Okaloosa Island, Shalimar, and Pensacola) is treated as a "Chapter." 
 
-## Learn More
+By leveraging **Server-Side Rendering (SSR)** and a centralized data architecture, the site provides a seamless, editorial-grade experience for potential homebuyers and sellers.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technical Stack
+* **Framework:** Next.js 15 (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS (Custom Serif/Sans integration)
+* **Icons:** React Icons / Lucide
+* **Deployment:** Vercel (Optimized for Core Web Vitals)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🏗️ Key Features
+* **Dynamic Story Routing:** Automated generation of local "Chapters" using React's `params` and `CHAPTERS` data mapping.
+* **Performance Optimized:** Implements Next.js `<Image />` priority loading and responsive `sizes` to ensure a perfect LCP score.
+* **Digital CV:** A custom-built professional narrative highlighting my background in **Freelance Web Development** and **Administrative Lead** roles.
+* **Responsive Narrative:** Tailored typography and layouts that adapt from mobile browsing to high-end desktop displays.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Local Development
 
-## Deploy on Vercel
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/CodeLikeAGirl29/real-estate-broker.git](https://github.com/CodeLikeAGirl29/real-estate-broker.git)
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Edit Content:**
+    Update `src/data/chapters.ts` to add new neighborhood stories or update the professional resume.
+
+---
+
+## 📞 Connect with Me
+**Lindsey Howard** *Real Estate Sales Associate Candidate | Freelance Web Developer* 📍 Fort Walton Beach, FL  
+📱 850.368.5224  
+📧 lindsey.howard.re@outlook.com
+
+---
+*Created with focus on project delivery, attention to detail, and trust-based storytelling.*
